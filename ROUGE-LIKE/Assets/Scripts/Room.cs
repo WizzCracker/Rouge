@@ -15,19 +15,23 @@ public class Room : MonoBehaviour
     {
         if(direction == Vector2Int.up)
         {
-            topDoor.SetActive(true);
+            topDoor.GetComponent<SpriteRenderer>().color = Color.black;
+            topDoor.GetComponent<BoxCollider2D>().enabled = false;
         }
         if (direction == Vector2Int.down)
         {
-            bottomDoor.SetActive(true);
+            bottomDoor.GetComponent<SpriteRenderer>().color = Color.black;
+            bottomDoor.GetComponent<BoxCollider2D>().enabled = false;
         }
         if (direction == Vector2Int.left)
         {
-            leftDoor.SetActive(true);
+            leftDoor.GetComponent<SpriteRenderer>().color = Color.black;
+            leftDoor.GetComponent<BoxCollider2D>().enabled = false;
         }
         if (direction == Vector2Int.right)
         {
-            rightDoor.SetActive(true);
+            rightDoor.GetComponent<SpriteRenderer>().color = Color.black;
+            rightDoor.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 }
