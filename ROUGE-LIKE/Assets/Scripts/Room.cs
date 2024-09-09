@@ -11,26 +11,26 @@ public class Room : MonoBehaviour
 
     public Vector2Int RoomIndex { get; set; }
 
-    public void OpenDoor(Vector2Int direction)
+    public void OpenDoor(Vector2Int direction, Color doorColor)
     {
         if(direction == Vector2Int.up)
         {
-            topDoor.GetComponent<SpriteRenderer>().color = Color.black;
+            topDoor.GetComponent<SpriteRenderer>().color = doorColor;
             topDoor.GetComponent<BoxCollider2D>().enabled = false;
         }
         if (direction == Vector2Int.down)
         {
-            bottomDoor.GetComponent<SpriteRenderer>().color = Color.black;
+            bottomDoor.GetComponent<SpriteRenderer>().color = doorColor;
             bottomDoor.GetComponent<BoxCollider2D>().enabled = false;
         }
         if (direction == Vector2Int.left)
         {
-            leftDoor.GetComponent<SpriteRenderer>().color = Color.black;
+            leftDoor.GetComponent<SpriteRenderer>().color = doorColor;
             leftDoor.GetComponent<BoxCollider2D>().enabled = false;
         }
         if (direction == Vector2Int.right)
         {
-            rightDoor.GetComponent<SpriteRenderer>().color = Color.black;
+            rightDoor.GetComponent<SpriteRenderer>().color = doorColor;
             rightDoor.GetComponent<BoxCollider2D>().enabled = false;
         }
     }

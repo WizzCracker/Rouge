@@ -403,7 +403,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5.6360316
+  orthographic size: 5.4761643
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -562,6 +562,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomPrefab: {fileID: 6478797415893723504, guid: 3ef8bb0cf000fed48b8fee18ea50f93c, type: 3}
+  bossRoomPrefab: {fileID: 7339766598525140104, guid: 7dc3748ebe8fcb24a977a4c4881e904f, type: 3}
+  treasureRoomPrefab: {fileID: 7192018383525001386, guid: 83a2a4bc262509f4f884920b48149a0a, type: 3}
   maxRooms: 15
   minRooms: 10
   gridSizeX: 10
