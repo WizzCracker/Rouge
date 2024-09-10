@@ -99,6 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e68aa5d2661d745ac00b7c6ba5efe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 15
+  damage: 40
+  rb: {fileID: 5743143616623798904}
   hitEffect: {fileID: 5881730988215751328, guid: 4340336ce8f91ca419e753bef8ad68ec, type: 3}
 --- !u!70 &7170015125407948683
 CapsuleCollider2D:
@@ -129,7 +132,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
