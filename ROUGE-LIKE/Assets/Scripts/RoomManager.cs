@@ -12,8 +12,8 @@ public class RoomManager : MonoBehaviour
     [SerializeField] private int minRooms = 10;
     int roomWidth = 20;
     int roomHeight = 12;
-    [SerializeField] int gridSizeX = 10;
-    [SerializeField] int gridSizeY = 10;
+    [SerializeField] int gridSizeX = 11;
+    [SerializeField] int gridSizeY = 11;
 
     private List<GameObject> roomObjects = new List<GameObject>();
 
