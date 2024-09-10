@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class RoomManager : MonoBehaviour
@@ -112,7 +113,7 @@ public class RoomManager : MonoBehaviour
         else
         {
             roomQueue.Enqueue(roomIndex);
-            newRoom = Instantiate(roomPrefab, GetPositionFromGridIndex(roomIndex), Quaternion.identity);
+            newRoom = Instantiate(Resources.Load<GameObject>("Prefabs/Room" + Random.Range(2,4).ToString()), GetPositionFromGridIndex(roomIndex), Quaternion.identity);
             OpenDoors(newRoom, x, y, Color.black);
         }
         newRoom.GetComponent<Room>().RoomIndex = roomIndex;
