@@ -217,6 +217,8 @@ MonoBehaviour:
   moveSpeed: 7.5
   rb: {fileID: 500799489}
   cam: {fileID: 519420031}
+  maxHealth: 3
+  currentHealth: 3
 --- !u!212 &500799491
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -344,7 +346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 243985155}
   bulletPrefab: {fileID: 792437025408059645, guid: 53e81e1774e535b4787be2801b3bffef, type: 3}
-  bulletForce: 20
+  bulletForce: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
