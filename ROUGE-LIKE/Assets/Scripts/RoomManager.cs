@@ -123,7 +123,7 @@ public class RoomManager : MonoBehaviour
         return true;
     }
 
-    void OpenDoors(GameObject room, int x, int y,Color color)
+    public void OpenDoors(GameObject room, int x, int y,Color color)
     {
         Room newRoomScript = room.GetComponent<Room>();
 

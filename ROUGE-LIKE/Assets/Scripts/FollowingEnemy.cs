@@ -34,6 +34,10 @@ public class FollowingEnemy : MonoBehaviour
         GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(effect, 0.5f);
         GetComponent<Collider2D>().enabled = false;
+        if(gameObject.transform.parent.transform.childCount == 1)
+        {
+            
+        }
         Destroy(gameObject);
     }
 
