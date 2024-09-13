@@ -68,6 +68,7 @@ public class RoomManager : MonoBehaviour
         roomGrid[x, y] = 1;
         roomCount++;
         var initialRoom = Instantiate(roomPrefab, GetPositionFromGridIndex(roomIndex), Quaternion.identity);
+        initialRoom.transform.SetParent(this.transform);
         initialRoom.name = $"Room-{roomCount}";
         initialRoom.GetComponent<Room>().RoomIndex = roomIndex;
         roomObjects.Add(initialRoom);
@@ -116,6 +117,7 @@ public class RoomManager : MonoBehaviour
             newRoom = Instantiate(Resources.Load<GameObject>("Prefabs/Room" + Random.Range(2,4).ToString()), GetPositionFromGridIndex(roomIndex), Quaternion.identity);
             OpenDoors(newRoom, x, y, Color.black);
         }
+        newRoom.transform.SetParent(this.transform);
         newRoom.GetComponent<Room>().RoomIndex = roomIndex;
         newRoom.name = $"Room-{roomCount}";
         roomObjects.Add(newRoom);

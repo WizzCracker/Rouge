@@ -14,11 +14,6 @@ public class FollowingEnemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void TakeDamage(int damage)
     {
         health -= damage;
@@ -34,9 +29,9 @@ public class FollowingEnemy : MonoBehaviour
         GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(effect, 0.5f);
         GetComponent<Collider2D>().enabled = false;
-        if(gameObject.transform.parent.transform.childCount == 1)
+        if(gameObject.transform.parent.transform.childCount == 5)
         {
-            
+            gameObject.transform.parent.gameObject.SetActive(false);
         }
         Destroy(gameObject);
     }

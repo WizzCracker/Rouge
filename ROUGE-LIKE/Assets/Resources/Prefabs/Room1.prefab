@@ -1014,7 +1014,7 @@ GameObject:
   - component: {fileID: 8324161238889081800}
   - component: {fileID: 7655910213412674114}
   m_Layer: 0
-  m_Name: CmaeraTrigger
+  m_Name: CameraTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
