@@ -103,13 +103,13 @@ public class RoomManager : MonoBehaviour
         {
             newRoom = Instantiate(treasureRoomPrefab, GetPositionFromGridIndex(roomIndex), Quaternion.identity);
             treasureActive = true;
-            OpenDoors(newRoom, x, y, new Color(0.4f, 0.3f, 0));
+            OpenDoors(newRoom, x, y, new Color(0.9f, 0.8f, 0f, 0.5f));
         }
         else if(roomCount >= maxRooms / 2 && !bossActive && Random.value <= 0.20f + (roomCount / 18.75f))
         {
             newRoom = Instantiate(bossRoomPrefab, GetPositionFromGridIndex(roomIndex), Quaternion.identity);
             bossActive = true;
-            OpenDoors(newRoom, x, y, new Color(0.4f, 0f, 0f));
+            OpenDoors(newRoom, x, y, new Color(0.8f, 0f, 0f, 0.5f));
         }
         else
         {
