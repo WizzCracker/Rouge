@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   deathEffect: {fileID: 5881730988215751328, guid: 4340336ce8f91ca419e753bef8ad68ec, type: 3}
-  speed: 0
+  speed: 3.5
 --- !u!58 &7736446117580586998
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -149,7 +149,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
