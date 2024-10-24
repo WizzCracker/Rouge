@@ -10,15 +10,24 @@ public class FollowingEnemy : MonoBehaviour
     //private Transform currentPoint;
     private Transform target;
     public float speed;
+    Vector2 lookDir;
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        rb.velocity = Vector3.zero;
+        if (target != null)
+        {
+            lookDir = (Vector2)target.position - rb.position;
+            float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+            rb.rotation = angle;
+            transform.position += transform.up * speed * Time.deltaTime;
+        }
+        //transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
     public void TakeDamage(int damage)
     {
